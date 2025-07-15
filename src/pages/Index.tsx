@@ -73,8 +73,8 @@ const Index = () => {
     demo: "#",
     company: "Geeksroot"
   }, {
-    title: "Highway App - Sindh Transport",
-    description: "React Native and Laravel-based transportation app for Sindh province with real-time tracking and booking features.",
+    title: "Highway App - Transport Management System",
+    description: "React Native and Laravel-based transportation app for province with real-time tracking and booking features.",
     tech: ["React Native", "Laravel", "MySQL", "Google Maps API"],
     category: "mobile",
     image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop",
@@ -99,9 +99,23 @@ const Index = () => {
     "Tools & Others": ["Git", "Bitbucket", "Postman", "Tailwind CSS"]
   };
   const experiences = [{
+    title: "Full-Stack Developer",
+    company: "Upwork",
+    period: "Present",
+    location: "Remote",
+    website: "https://upwork.com/freelancers/muhammadaquibshaikh2*",
+    description: "Delivering full-stack web and blockchain solutions to global clients on Upwork.",
+    achievements: [
+      "Successfully completed 10+ freelance projects with 5-star client ratings",
+      "Developed custom web applications using React, Laravel, and Node.js",
+      "Implemented smart contracts and blockchain integrations for DeFi and NFT platforms",
+      "Automated deployment pipelines and improved CI/CD processes for client projects",
+      "Provided technical consultation and architecture planning for startups and SMEs"
+    ]
+  }, {
     title: "Full-Stack & Blockchain Developer",
     company: "Geeksroot",
-    period: "Oct 2020 – Present",
+    period: "Oct 2020 – 2023",
     location: "Karachi, Pakistan",
     website: "https://geeksroot.com",
     description: "Leading development of innovative web and blockchain solutions including NFT marketplaces, DeFi applications, and enterprise management systems.",
@@ -201,7 +215,7 @@ const Index = () => {
                 Senior Full-Stack & Blockchain Developer
               </h2>
               <p className="text-sm text-muted-foreground mb-6">
-                📍 Mirpurkhas, Pakistan | 📧 aquib20034@gmail.com | 📞 +92 313 9120034
+                📍 Karachi, Pakistan | 📧 aquib20034@gmail.com | 📞 +92 336 8275607
               </p>
               <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
                 Building scalable web apps and decentralized solutions with purpose.
@@ -450,11 +464,11 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-primary" />
-                    <span>+92 313 9120034</span>
+                    <span>+92 336 8275607</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="h-5 w-5 text-primary" />
-                    <span>Mirpurkhas, Pakistan</span>
+                    <span>Karachi, Pakistan</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Github className="h-5 w-5 text-primary" />
@@ -464,7 +478,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Linkedin className="h-5 w-5 text-primary" />
-                    <a href="https://linkedin.com/in/aquib-shaikh-a31a49192" className="hover:text-primary transition-colors">
+                    <a href="https://www.linkedin.com/in/muhammad-aquib-a31a49192/" className="hover:text-primary transition-colors">
                       LinkedIn Profile
                     </a>
                   </div>
