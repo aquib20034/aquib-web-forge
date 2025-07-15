@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Moon, Sun, Download, ExternalLink, Github, Linkedin, Mail, Phone, MapPin, Filter, Calendar, Users, Code, Award, ChevronDown, Menu, X, Globe, BookOpen, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -6,13 +5,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
-
 const Index = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
-
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
@@ -20,12 +17,10 @@ const Index = () => {
       document.documentElement.classList.remove('dark');
     }
   }, [isDarkMode]);
-
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['hero', 'about', 'experience', 'projects', 'skills', 'contact'];
       const scrollPosition = window.scrollY + 100;
-
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -38,74 +33,64 @@ const Index = () => {
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const projects = [
-    {
-      title: "Washup - Laundry Management System",
-      description: "Complete laundry management system built with Laravel backend and React Native mobile app for efficient laundry operations.",
-      tech: ["Laravel", "React Native", "MySQL", "REST API"],
-      category: "web",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
-      github: "https://github.com/aquib20034/",
-      demo: "#",
-      company: "Geeksroot"
-    },
-    {
-      title: "Jack in Box - ERC721A NFT",
-      description: "Advanced NFT marketplace with ERC721A standard implementation, featuring gas-optimized batch minting and trading capabilities.",
-      tech: ["Solidity", "React", "Web3.js", "IPFS", "ERC721A"],
-      category: "blockchain",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop",
-      github: "https://github.com/aquib20034/",
-      demo: "#",
-      company: "Geeksroot"
-    },
-    {
-      title: "Baguette Boyz NFT Collection",
-      description: "ERC-721 smart contract with advanced features including whitelisting, max wallet mint limits, and presale functionality.",
-      tech: ["Solidity", "OpenZeppelin", "Hardhat", "React"],
-      category: "blockchain",
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop",
-      github: "https://github.com/aquib20034/",
-      demo: "#",
-      company: "Geeksroot"
-    },
-    {
-      title: "Playon - Snooker League Management",
-      description: "Laravel-based comprehensive snooker league management system with player statistics, tournament organization, and match scheduling.",
-      tech: ["Laravel", "Vue.js", "MySQL", "Tailwind CSS"],
-      category: "web",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop",
-      github: "https://github.com/aquib20034/",
-      demo: "#",
-      company: "Geeksroot"
-    },
-    {
-      title: "Highway App - Sindh Transport",
-      description: "React Native and Laravel-based transportation app for Sindh province with real-time tracking and booking features.",
-      tech: ["React Native", "Laravel", "MySQL", "Google Maps API"],
-      category: "mobile",
-      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop",
-      github: "https://github.com/aquib20034/",
-      demo: "#",
-      company: "Geeksroot"
-    },
-    {
-      title: "Blockchain Land Registry",
-      description: "Revolutionary land registration system using blockchain technology for immutable property records and transparent transactions.",
-      tech: ["Solidity", "Next.js", "Ethereum", "IPFS"],
-      category: "blockchain",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
-      github: "https://github.com/aquib20034/",
-      demo: "#",
-      company: "Research Project"
-    }
-  ];
-
+  const projects = [{
+    title: "Washup - Laundry Management System",
+    description: "Complete laundry management system built with Laravel backend and React Native mobile app for efficient laundry operations.",
+    tech: ["Laravel", "React Native", "MySQL", "REST API"],
+    category: "web",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    github: "https://github.com/aquib20034/",
+    demo: "#",
+    company: "Geeksroot"
+  }, {
+    title: "Jack in Box - ERC721A NFT",
+    description: "Advanced NFT marketplace with ERC721A standard implementation, featuring gas-optimized batch minting and trading capabilities.",
+    tech: ["Solidity", "React", "Web3.js", "IPFS", "ERC721A"],
+    category: "blockchain",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop",
+    github: "https://github.com/aquib20034/",
+    demo: "#",
+    company: "Geeksroot"
+  }, {
+    title: "Baguette Boyz NFT Collection",
+    description: "ERC-721 smart contract with advanced features including whitelisting, max wallet mint limits, and presale functionality.",
+    tech: ["Solidity", "OpenZeppelin", "Hardhat", "React"],
+    category: "blockchain",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop",
+    github: "https://github.com/aquib20034/",
+    demo: "#",
+    company: "Geeksroot"
+  }, {
+    title: "Playon - Snooker League Management",
+    description: "Laravel-based comprehensive snooker league management system with player statistics, tournament organization, and match scheduling.",
+    tech: ["Laravel", "Vue.js", "MySQL", "Tailwind CSS"],
+    category: "web",
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop",
+    github: "https://github.com/aquib20034/",
+    demo: "#",
+    company: "Geeksroot"
+  }, {
+    title: "Highway App - Sindh Transport",
+    description: "React Native and Laravel-based transportation app for Sindh province with real-time tracking and booking features.",
+    tech: ["React Native", "Laravel", "MySQL", "Google Maps API"],
+    category: "mobile",
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop",
+    github: "https://github.com/aquib20034/",
+    demo: "#",
+    company: "Geeksroot"
+  }, {
+    title: "Blockchain Land Registry",
+    description: "Revolutionary land registration system using blockchain technology for immutable property records and transparent transactions.",
+    tech: ["Solidity", "Next.js", "Ethereum", "IPFS"],
+    category: "blockchain",
+    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
+    github: "https://github.com/aquib20034/",
+    demo: "#",
+    company: "Research Project"
+  }];
   const skills = {
     "Frontend Development": ["HTML", "CSS", "JavaScript", "React", "Next.js", "Vue.js", "jQuery"],
     "Backend Development": ["PHP", "Laravel", "Node.js", "REST APIs", "MySQL", "MongoDB"],
@@ -113,78 +98,53 @@ const Index = () => {
     "Mobile Development": ["React Native", "Android"],
     "Tools & Others": ["Git", "Bitbucket", "Postman", "Tailwind CSS"]
   };
-
-  const experiences = [
-    {
-      title: "Full-Stack & Blockchain Developer",
-      company: "Geeksroot",
-      period: "Oct 2020 – Present",
-      location: "Karachi, Pakistan",
-      website: "https://geeksroot.com",
-      description: "Leading development of innovative web and blockchain solutions including NFT marketplaces, DeFi applications, and enterprise management systems.",
-      achievements: [
-        "Developed multiple ERC721/ERC721A NFT contracts",
-        "Built scalable Laravel applications with React frontends",
-        "Implemented blockchain solutions for various industries"
-      ]
-    },
-    {
-      title: "Web Developer",
-      company: "LUMHS",
-      period: "Mar 2020 – Aug 2020",
-      location: "Jamshoro, Pakistan",
-      description: "Developed E-Store management system for university operations using Laravel framework.",
-      achievements: [
-        "Built comprehensive store management system",
-        "Improved university's digital infrastructure"
-      ]
-    },
-    {
-      title: "PHP Developer",
-      company: "Ali Solutions",
-      period: "Jan 2018 – Feb 2019",
-      description: "Developed hospital management system using Core PHP, focusing on patient management and medical records.",
-      achievements: [
-        "Created MMCH hospital management system",
-        "Implemented patient record management features"
-      ]
-    }
-  ];
-
-  const awards = [
-    {
-      title: "Best Research-Based Award",
-      event: "IICT-2020",
-      organization: "University of Sindh, Jamshoro",
-      year: "2020"
-    }
-  ];
-
-  const publications = [
-    {
-      title: "Blockchain-Based Land Record Management in Pakistan",
-      publisher: "IEEE",
-      url: "https://ieeexplore.ieee.org/document/9073927"
-    },
-    {
-      title: "Blockchain Implementation Challenges & Limitation",
-      publisher: "USJICT",
-      url: "https://sujo.usindh.edu.pk/index.php/USJICT/article/view/3300"
-    }
-  ];
-
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
-
+  const experiences = [{
+    title: "Full-Stack & Blockchain Developer",
+    company: "Geeksroot",
+    period: "Oct 2020 – Present",
+    location: "Karachi, Pakistan",
+    website: "https://geeksroot.com",
+    description: "Leading development of innovative web and blockchain solutions including NFT marketplaces, DeFi applications, and enterprise management systems.",
+    achievements: ["Developed multiple ERC721/ERC721A NFT contracts", "Built scalable Laravel applications with React frontends", "Implemented blockchain solutions for various industries"]
+  }, {
+    title: "Web Developer",
+    company: "LUMHS",
+    period: "Mar 2020 – Aug 2020",
+    location: "Jamshoro, Pakistan",
+    description: "Developed E-Store management system for university operations using Laravel framework.",
+    achievements: ["Built comprehensive store management system", "Improved university's digital infrastructure"]
+  }, {
+    title: "PHP Developer",
+    company: "Ali Solutions",
+    period: "Jan 2018 – Feb 2019",
+    description: "Developed hospital management system using Core PHP, focusing on patient management and medical records.",
+    achievements: ["Created MMCH hospital management system", "Implemented patient record management features"]
+  }];
+  const awards = [{
+    title: "Best Research-Based Award",
+    event: "IICT-2020",
+    organization: "University of Sindh, Jamshoro",
+    year: "2020"
+  }];
+  const publications = [{
+    title: "Blockchain-Based Land Record Management in Pakistan",
+    publisher: "IEEE",
+    url: "https://ieeexplore.ieee.org/document/9073927"
+  }, {
+    title: "Blockchain Implementation Challenges & Limitation",
+    publisher: "USJICT",
+    url: "https://sujo.usindh.edu.pk/index.php/USJICT/article/view/3300"
+  }];
+  const filteredProjects = activeFilter === 'all' ? projects : projects.filter(project => project.category === activeFilter);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
       setIsMenuOpen(false);
     }
   };
-
   const downloadCV = () => {
     // Create a temporary link to download CV
     const link = document.createElement('a');
@@ -194,9 +154,7 @@ const Index = () => {
     link.click();
     document.body.removeChild(link);
   };
-
-  return (
-    <div className={`min-h-screen bg-background text-foreground transition-colors duration-300`}>
+  return <div className={`min-h-screen bg-background text-foreground transition-colors duration-300`}>
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -205,55 +163,29 @@ const Index = () => {
             
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
-              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    activeSection === item.toLowerCase() ? 'text-primary' : 'text-muted-foreground'
-                  }`}
-                >
+              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map(item => <button key={item} onClick={() => scrollToSection(item.toLowerCase())} className={`text-sm font-medium transition-colors hover:text-primary ${activeSection === item.toLowerCase() ? 'text-primary' : 'text-muted-foreground'}`}>
                   {item}
-                </button>
-              ))}
+                </button>)}
             </div>
 
             <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsDarkMode(!isDarkMode)}
-                className="rounded-full"
-              >
+              <Button variant="ghost" size="icon" onClick={() => setIsDarkMode(!isDarkMode)} className="rounded-full">
                 {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
               
               {/* Mobile Menu Button */}
-              <Button
-                variant="ghost"
-                size="icon"
-                className="md:hidden"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
+              <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </Button>
             </div>
           </div>
 
           {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="md:hidden py-4 space-y-2">
-              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block w-full text-left px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                >
+          {isMenuOpen && <div className="md:hidden py-4 space-y-2">
+              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map(item => <button key={item} onClick={() => scrollToSection(item.toLowerCase())} className="block w-full text-left px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
                   {item}
-                </button>
-              ))}
-            </div>
-          )}
+                </button>)}
+            </div>}
         </div>
       </nav>
 
@@ -305,7 +237,7 @@ const Index = () => {
                 <div className="mb-6">
                   <h3 className="font-semibold mb-3">Personal Details:</h3>
                   <div className="grid grid-cols-1 gap-2 text-sm text-muted-foreground">
-                    <div>📅 Born: May 16, 1997</div>
+                    
                     <div>🎓 BS Information Technology - University of Sindh (2016-2019)</div>
                     <div>🗣️ Languages: English, Urdu, Hindi</div>
                   </div>
@@ -340,12 +272,10 @@ const Index = () => {
                       <Award className="h-5 w-5 text-primary mr-2" />
                       <h3 className="font-semibold">Awards & Recognition</h3>
                     </div>
-                    {awards.map((award, index) => (
-                      <div key={index} className="mb-2">
+                    {awards.map((award, index) => <div key={index} className="mb-2">
                         <p className="font-medium text-primary">{award.title}</p>
                         <p className="text-sm text-muted-foreground">{award.event} - {award.organization} ({award.year})</p>
-                      </div>
-                    ))}
+                      </div>)}
                   </CardContent>
                 </Card>
                 <Card className="hover:shadow-lg transition-shadow border-accent/20">
@@ -354,14 +284,12 @@ const Index = () => {
                       <BookOpen className="h-5 w-5 text-accent mr-2" />
                       <h3 className="font-semibold">Publications</h3>
                     </div>
-                    {publications.map((pub, index) => (
-                      <div key={index} className="mb-2">
+                    {publications.map((pub, index) => <div key={index} className="mb-2">
                         <a href={pub.url} target="_blank" rel="noopener noreferrer" className="font-medium text-primary hover:underline">
                           {pub.title}
                         </a>
                         <p className="text-sm text-muted-foreground">{pub.publisher}</p>
-                      </div>
-                    ))}
+                      </div>)}
                   </CardContent>
                 </Card>
               </div>
@@ -376,8 +304,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Experience</h2>
             <div className="space-y-8">
-              {experiences.map((exp, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow border-primary/10">
+              {experiences.map((exp, index) => <Card key={index} className="hover:shadow-lg transition-shadow border-primary/10">
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
@@ -385,18 +312,14 @@ const Index = () => {
                         <CardDescription className="text-accent font-medium">
                           {exp.company} • {exp.period}
                         </CardDescription>
-                        {exp.location && (
-                          <CardDescription className="flex items-center mt-1">
+                        {exp.location && <CardDescription className="flex items-center mt-1">
                             <MapPin className="h-3 w-3 mr-1" />
                             {exp.location}
-                          </CardDescription>
-                        )}
-                        {exp.website && (
-                          <a href={exp.website} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline flex items-center mt-1">
+                          </CardDescription>}
+                        {exp.website && <a href={exp.website} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline flex items-center mt-1">
                             <Globe className="h-3 w-3 mr-1" />
                             {exp.website}
-                          </a>
-                        )}
+                          </a>}
                       </div>
                       <Badge className={index === 0 ? 'bg-primary' : 'bg-secondary'}>
                         {index === 0 ? 'Current' : 'Previous'}
@@ -405,19 +328,14 @@ const Index = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">{exp.description}</p>
-                    {exp.achievements && (
-                      <ul className="space-y-2">
-                        {exp.achievements.map((achievement, i) => (
-                          <li key={i} className="flex items-start">
+                    {exp.achievements && <ul className="space-y-2">
+                        {exp.achievements.map((achievement, i) => <li key={i} className="flex items-start">
                             <Star className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
                             <span className="text-sm text-muted-foreground">{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                          </li>)}
+                      </ul>}
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -431,67 +349,42 @@ const Index = () => {
             
             {/* Filter Buttons */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <Button
-                variant={activeFilter === 'all' ? 'default' : 'outline'}
-                onClick={() => setActiveFilter('all')}
-                className={activeFilter === 'all' ? 'bg-primary' : ''}
-              >
+              <Button variant={activeFilter === 'all' ? 'default' : 'outline'} onClick={() => setActiveFilter('all')} className={activeFilter === 'all' ? 'bg-primary' : ''}>
                 All Projects
               </Button>
-              <Button
-                variant={activeFilter === 'web' ? 'default' : 'outline'}
-                onClick={() => setActiveFilter('web')}
-                className={activeFilter === 'web' ? 'bg-primary' : ''}
-              >
+              <Button variant={activeFilter === 'web' ? 'default' : 'outline'} onClick={() => setActiveFilter('web')} className={activeFilter === 'web' ? 'bg-primary' : ''}>
                 Web Development
               </Button>
-              <Button
-                variant={activeFilter === 'blockchain' ? 'default' : 'outline'}
-                onClick={() => setActiveFilter('blockchain')}
-                className={activeFilter === 'blockchain' ? 'bg-primary' : ''}
-              >
+              <Button variant={activeFilter === 'blockchain' ? 'default' : 'outline'} onClick={() => setActiveFilter('blockchain')} className={activeFilter === 'blockchain' ? 'bg-primary' : ''}>
                 Blockchain
               </Button>
-              <Button
-                variant={activeFilter === 'mobile' ? 'default' : 'outline'}
-                onClick={() => setActiveFilter('mobile')}
-                className={activeFilter === 'mobile' ? 'bg-primary' : ''}
-              >
+              <Button variant={activeFilter === 'mobile' ? 'default' : 'outline'} onClick={() => setActiveFilter('mobile')} className={activeFilter === 'mobile' ? 'bg-primary' : ''}>
                 Mobile Apps
               </Button>
             </div>
 
             {/* Projects Grid */}
             <div className="grid md:grid-cols-2 gap-8">
-              {filteredProjects.map((project, index) => (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-primary/10">
+              {filteredProjects.map((project, index) => <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-primary/10">
                   <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   </div>
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <CardTitle className="group-hover:text-primary transition-colors">
                         {project.title}
                       </CardTitle>
-                      {project.company && (
-                        <Badge variant="outline" className="text-xs">
+                      {project.company && <Badge variant="outline" className="text-xs">
                           {project.company}
-                        </Badge>
-                      )}
+                        </Badge>}
                     </div>
                     <CardDescription>{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tech.map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">
+                      {project.tech.map((tech, techIndex) => <Badge key={techIndex} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">
                           {tech}
-                        </Badge>
-                      ))}
+                        </Badge>)}
                     </div>
                     <div className="flex space-x-4">
                       <Button variant="outline" size="sm" asChild>
@@ -508,8 +401,7 @@ const Index = () => {
                       </Button>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -521,26 +413,18 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gradient-text">Skills</h2>
             <div className="grid md:grid-cols-2 gap-8">
-              {Object.entries(skills).map(([category, skillList], index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow border-primary/10">
+              {Object.entries(skills).map(([category, skillList], index) => <Card key={index} className="hover:shadow-lg transition-shadow border-primary/10">
                   <CardHeader>
                     <CardTitle className="text-lg text-primary">{category}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
-                      {skillList.map((skill, skillIndex) => (
-                        <Badge 
-                          key={skillIndex} 
-                          variant="outline" 
-                          className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default border-primary/20"
-                        >
+                      {skillList.map((skill, skillIndex) => <Badge key={skillIndex} variant="outline" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default border-primary/20">
                           {skill}
-                        </Badge>
-                      ))}
+                        </Badge>)}
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -611,8 +495,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
